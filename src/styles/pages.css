@@ -1,0 +1,501 @@
+/* Car Finder, Apply Online, About Us, Contact Us, Legal & Sitemap Pages */
+
+/* CAR FINDER */
+.car-finder-band {
+  background-color: var(--bg-car-finder);
+  padding: 44px 15px 56px;
+}
+
+.car-finder-container {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.car-finder-intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.car-finder-intro h2 {
+  font-family: var(--font-heading);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 4px;
+}
+
+.car-finder-intro p {
+  font-family: var(--font-heading);
+  font-size: 15.5px;
+  color: #222222;
+  margin: 0;
+}
+
+.required-note {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  color: #666666;
+  margin: 0 0 12px;
+}
+
+.form-section-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  margin: 20px 0 10px;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-bottom: 14px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.form-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.form-row-full {
+  margin-bottom: 14px;
+}
+
+.cf-input,
+.cf-select,
+.cf-textarea {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #333333;
+  border-radius: 0;
+}
+
+.cf-input,
+.cf-select {
+  height: 40px;
+}
+
+.cf-textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 11px;
+  color: #555555;
+  margin-top: 4px;
+}
+
+.consent-box {
+  background: var(--bg-car-finder-consent);
+  padding: 20px 95px;
+  margin: 22px -95px 24px;
+  font-size: 13px;
+  color: #111111;
+  line-height: 1.48;
+}
+
+.consent-box--light {
+  background: #f7f7f7;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.consent-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: #222222;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.consent-legal-p {
+  margin: 12px 0;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: #1a1a1a;
+  line-height: 1.45;
+}
+
+.consent-sub-links {
+  font-size: 10.5px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.consent-sub-links a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.center-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-submit-pill {
+  min-width: 156px;
+  height: 36px;
+  border-radius: 999px;
+  background: #555555;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.16s ease;
+}
+
+.form-submit-pill--black {
+  background: #0d0d0d;
+}
+
+.form-submit-pill:hover {
+  background: #222222;
+}
+
+/* APPLY ONLINE */
+.apply-page {
+  background: #ffffff;
+  padding-bottom: 56px;
+}
+
+.apply-tabs-bar {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 2px;
+}
+
+.apply-tab-btn {
+  padding: 9px 18px;
+  border: none;
+  background: #cccccc;
+  color: #111111;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.apply-tab-btn.is-active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.apply-form-narrow {
+  max-width: 710px;
+  margin: 18px auto 0;
+}
+
+.apply-section-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 500;
+  color: #222222;
+  margin: 26px 0 14px;
+}
+
+.ap-field label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 5px;
+}
+
+.ap-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ap-input-icon-right {
+  position: absolute;
+  right: 10px;
+  color: #888888;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.ap-input-icon-left {
+  position: absolute;
+  left: 10px;
+  color: #777777;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.ap-input,
+.ap-select {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  color: #333333;
+}
+
+.ap-input--has-right {
+  padding-right: 32px;
+}
+
+.ap-input--has-left {
+  padding-left: 32px;
+}
+
+.ap-inline-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  color: #1956b4;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.ap-vehicle-search-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.ap-vehicle-search-row .ap-input-wrap {
+  flex: 1;
+}
+
+.ap-vehicle-search-row input {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ap-sort-chip {
+  height: 36px;
+  padding: 0 12px;
+  background: #f7f7f7;
+  border: 1px solid #d4d4d4;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: #333333;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ABOUT US */
+.about-section {
+  background: #ffffff;
+  padding: 18px 0 110px;
+}
+
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  max-width: 1220px;
+}
+
+.about-columns p {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.64;
+  color: #3d3d3d;
+  margin: 0 0 16px;
+}
+
+/* CONTACT US */
+.contact-top-section {
+  background: #ffffff;
+  padding: 16px 0 48px;
+}
+
+.contact-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-feedback-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 0 0 16px;
+}
+
+.contact-feedback-copy p {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: #333333;
+  margin: 0 0 16px;
+}
+
+.contact-pref-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #333333;
+  margin: 8px 0 14px;
+}
+
+.contact-pref-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Contact Lower Gray Sales Office + Map Band (#F2F2F2) */
+.contact-office-band {
+  background: var(--bg-contact-office);
+  padding: 46px 0 56px;
+}
+
+.contact-office-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.office-dealer-name {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 400;
+  color: #222222;
+  margin: 0 0 10px;
+}
+
+.office-sub-heading {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 400;
+  color: #222222;
+  margin: 0 0 10px;
+}
+
+.office-address {
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+.office-phones {
+  font-size: 13px;
+  color: #222222;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.office-hours-table {
+  width: 100%;
+  max-width: 245px;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  color: #333333;
+}
+
+.office-hours-table td {
+  padding: 2.5px 0;
+}
+
+.office-hours-table tr.is-today td {
+  font-weight: 700;
+  color: #000000;
+}
+
+.map-card-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  background: #e8e6e1;
+  overflow: hidden;
+}
+
+.map-card-img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+/* Legal & Sitemap Pages */
+.legal-page-section {
+  background: #ffffff;
+  padding: 12px 0 76px;
+}
+
+.legal-content {
+  max-width: 960px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.legal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: #222222;
+  margin: 24px 0 8px;
+}
+
+.legal-content p,
+.legal-content li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 839px) {
+  .about-columns,
+  .contact-two-col,
+  .contact-office-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .consent-box {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-grid-2,
+  .form-grid-3,
+  .form-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

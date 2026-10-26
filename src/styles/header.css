@@ -1,0 +1,353 @@
+.site-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+}
+
+.site-header-wrapper.is-scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Contact Utility Bar (#ECECEC, 56px height) */
+.top-contact-bar {
+  background-color: var(--bg-top-bar);
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.top-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #333333;
+}
+
+.top-contact-item--left {
+  justify-content: flex-start;
+  padding-left: 56px;
+}
+
+.top-contact-item--right {
+  justify-content: flex-end;
+  padding-right: 36px;
+}
+
+.top-text-prefix {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+  letter-spacing: 0.02em;
+}
+
+.top-phone-link {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: #3a3a3a;
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+
+.top-phone-link:hover {
+  color: #000000;
+}
+
+.top-icon-svg {
+  color: #3a3a3a;
+  flex-shrink: 0;
+}
+
+.top-address-block {
+  text-align: center;
+  line-height: 1.24;
+}
+
+.top-sales-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 1px;
+}
+
+.top-address-lines {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+/* Main White Navigation Bar */
+.main-nav-bar {
+  background-color: #ffffff;
+  height: 152px;
+  display: flex;
+  align-items: center;
+  transition: height 0.22s ease;
+  position: relative;
+}
+
+.site-header-wrapper.is-scrolled .main-nav-bar {
+  height: 58px;
+}
+
+.main-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo-img {
+  height: 98px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.22s ease;
+}
+
+.site-header-wrapper.is-scrolled .header-logo-img {
+  height: 43px;
+}
+
+/* Desktop Navigation (stays visible on desktop + split preview down to 840px!) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.desktop-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0 14px 0 0;
+  border-right: 1px solid #bdbdbd;
+}
+
+.desktop-nav-link {
+  display: inline-block;
+  padding: 13px 10px;
+  font-family: var(--font-heading);
+  font-size: 16.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+  letter-spacing: 0.01em;
+  border-top: 2.5px solid transparent;
+  border-bottom: 2.5px solid transparent;
+  transition: border-color 0.16s ease, color 0.16s ease;
+  white-space: nowrap;
+}
+
+.site-header-wrapper.is-scrolled .desktop-nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.desktop-nav-link:hover,
+.desktop-nav-link.is-active {
+  color: #000000;
+  border-top-color: #000000;
+  border-bottom-color: #000000;
+}
+
+.header-search-btn {
+  background: transparent;
+  border: none;
+  color: #111111;
+  cursor: pointer;
+  padding: 8px 8px 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-search-btn:hover {
+  opacity: 0.7;
+}
+
+/* Header Search Dropdown */
+.header-search-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #212121;
+  padding: 14px 0;
+  border-top: 1px solid #383838;
+  z-index: 999;
+}
+
+.header-search-form {
+  display: flex;
+  gap: 8px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.header-search-input {
+  flex: 1;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #555555;
+  background: #ffffff;
+  font-size: 14px;
+  color: #222222;
+}
+
+.header-search-submit {
+  height: 38px;
+  padding: 0 22px;
+  background: var(--color-hero-red);
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Mobile Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: #212121;
+  color: #ffffff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .top-contact-item--left {
+    padding-left: 0;
+  }
+  .top-contact-item--right {
+    padding-right: 0;
+  }
+  .top-phone-link {
+    font-size: 15.5px;
+  }
+  .main-nav-bar {
+    height: 116px;
+  }
+  .header-logo-img {
+    height: 76px;
+  }
+  .desktop-nav-link {
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+  .desktop-nav-list {
+    gap: 2px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 839px) {
+  .top-contact-bar {
+    padding: 6px 0;
+  }
+  .top-contact-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+  }
+  .top-contact-item--right {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .top-phone-link {
+    font-size: 14.5px;
+  }
+  .main-nav-bar {
+    height: 80px;
+  }
+  .site-header-wrapper.is-scrolled .main-nav-bar {
+    height: 60px;
+  }
+  .header-logo-img {
+    height: 56px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .mobile-drawer {
+    display: block;
+    background: #1a1a1a;
+    border-top: 1px solid #333333;
+  }
+  .mobile-drawer-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+  }
+  .mobile-drawer-link {
+    display: block;
+    padding: 13px 20px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid #2b2b2b;
+  }
+  .mobile-drawer-link.is-active {
+    background: #2f2f2f;
+    color: var(--color-hero-red);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 575px) {
+  .top-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .top-contact-item,
+  .top-contact-item--left,
+  .top-contact-item--right {
+    justify-content: center;
+  }
+  .top-phone-link {
+    font-size: 13.5px;
+  }
+  .top-address-lines {
+    font-size: 10.5px;
+  }
+}
