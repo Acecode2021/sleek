@@ -7,7 +7,7 @@ export const DEALERSHIP_INFO = {
   phoneHref: 'tel:+19297825920',
   textDisplay: '+1(929)782-5920',
   textHref: 'sms:+19297825920',
- 
+
   hoursSummary: [
     { days: 'Mon - Fri :', time: '10:00 AM - 6:00 PM' },
     { days: 'Sat :', time: '10:00 AM - 2:00 PM' },
@@ -957,6 +957,73 @@ export const VEHICLES = [
       'CRUISE CONTROL',
     ],
   },
+  {
+  id: 21,
+  stockNumber: '208727',
+  vin: '2GCEK13T061208727', // ⚠️ Verify: this VIN decodes to a 2006 GMC, not a Chevy
+  year: 2006,
+  make: 'CHEVROLET',
+  model: 'SILVERADO 1500 CREW CAB',
+  title: '2006 CHEVROLET SILVERADO 1500 CREW CAB',
+  trim: 'LT1 PICKUP 4D',
+  price: 6500,
+  mileage: 169314,
+  drivetrain: '4WD',
+  transmission: 'AUTOMATIC',
+  transmissionDetail: 'AUTOMATIC',
+  engine: 'V8', // ⚠️ Engine displacement not specified in source — update if known (e.g. 5.3L)
+  doors: 4,
+  cityMpg: null,
+  hwyMpg: null,
+  mpgDisplay: '- / -',
+  bodyType: 'PICKUP',
+  fuelType: 'GASOLINE',
+  exteriorColor: 'RED',
+  interiorColor: 'BLACK', // ⚠️ Not specified — verify actual interior color
+  vehicleClass: 'USED',
+  isSpecial: false,
+  photoCount: 23,
+  images: [
+    '/images/vehicles/1.jpg',
+    '/images/vehicles/2.jpg',
+    '/images/vehicles/3.jpg',
+    '/images/vehicles/4.jpg',
+    '/images/vehicles/5.jpg',
+    '/images/vehicles/6.jpg',
+    '/images/vehicles/7.jpg',
+    '/images/vehicles/8.jpg',
+    '/images/vehicles/9.jpg',
+    '/images/vehicles/10.jpg',
+    '/images/vehicles/11.jpg',
+    '/images/vehicles/12.jpg',
+    '/images/vehicles/13.jpg',
+    '/images/vehicles/14.jpg',
+    '/images/vehicles/15.jpg',
+    '/images/vehicles/16.jpg',
+    '/images/vehicles/17.jpg',
+    '/images/vehicles/18.jpg',
+    '/images/vehicles/19.jpg',
+    '/images/vehicles/20.jpg',
+    '/images/vehicles/21.jpg',
+    '/images/vehicles/22.jpg',
+    '/images/vehicles/23.jpg',
+  ],
+  headline: 'SUPER CLEAN 2006 Chevrolet Silverado 1500 LT1 – Crew Cab 4WD!',
+  description:
+    'Beautiful 2006 Chevy Silverado 1500 LT1, Crew Cab, 4WD, with 169,314 miles. This truck is in great condition, clean inside and out, and well-maintained. Powerful, dependable, spacious, and ready for its next owner. Priced for a FAST SALE — serious buyers only. Message today for more information or to schedule a viewing. Don\'t miss out on this clean Silverado!',
+  equipment: [
+    'V8 ENGINE',
+    'AUTOMATIC TRANSMISSION',
+    '4WD CAPABILITY',
+    'CREW CAB',
+    'LT1 TRIM',
+    'CLEAN INTERIOR AND EXTERIOR',
+    'STRONG, RELIABLE PERFORMANCE',
+    'READY TO DRIVE',
+    'FINANCING AVAILABLE',
+    'POWER WINDOWS & LOCKS',
+  ],
+},
 ];
 
 // Exact 6 initial Featured Special slots matching observed reference screenshot order first, followed by remaining specials
@@ -982,16 +1049,20 @@ export const FEATURED_STOCK_ORDER = [
 ];
 
 export function getVehicleUrl(v) {
-  const makeSlug = v.make.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  const modelSlug = v.model.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  return `/inventory/${makeSlug}/${modelSlug}/${v.stockNumber.toLowerCase()}`;
+  const makeSlug = v.make.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const modelSlug = v.model.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const stockSlug = String(v.stockNumber).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  return `/inventory/${makeSlug}/${modelSlug}/${stockSlug}`;
 }
 
 export function formatCurrency(num) {
-  return '$' + Number(num || 0).toLocaleString('en-US');
+  const n = Number(num || 0);
+  return (n < 0 ? '-$' : '$') + Math.abs(n).toLocaleString('en-US');
 }
 
 export function formatMileageShort(num) {
-  const formatted = Number(num || 0).toLocaleString('en-US');
-  return formatted.length > 6 ? formatted.slice(0, 5) + '...' : formatted;
+  const n = Number(num || 0);
+  if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (n >= 1000) return Math.round(n / 1000) + 'k';
+  return String(n);
 }
