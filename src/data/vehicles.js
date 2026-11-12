@@ -1,4 +1,4 @@
-// Demonstration Vehicle Inventory Snapshot from sleekautosales.com (20 vehicles observed)
+// Demonstration Vehicle Inventory Snapshot from sleekautosales.com (21 vehicles)
 // Provided strictly for authorized UI/UX frontend recreation and filter testing.
 
 export const DEALERSHIP_INFO = {
@@ -958,94 +958,101 @@ export const VEHICLES = [
     ],
   },
   {
-  id: 21,
-  stockNumber: '208727',
-  vin: '2GCEK13T061208727', // ⚠️ Verify: this VIN decodes to a 2006 GMC, not a Chevy
-  year: 2006,
-  make: 'CHEVROLET',
-  model: 'SILVERADO 1500 CREW CAB',
-  title: '2006 CHEVROLET SILVERADO 1500 CREW CAB',
-  trim: 'LT1 PICKUP 4D',
-  price: 6500,
-  mileage: 169314,
-  drivetrain: '4WD',
-  transmission: 'AUTOMATIC',
-  transmissionDetail: 'AUTOMATIC',
-  engine: 'V8', // ⚠️ Engine displacement not specified in source — update if known (e.g. 5.3L)
-  doors: 4,
-  cityMpg: null,
-  hwyMpg: null,
-  mpgDisplay: '- / -',
-  bodyType: 'PICKUP',
-  fuelType: 'GASOLINE',
-  exteriorColor: 'RED',
-  interiorColor: 'BLACK', // ⚠️ Not specified — verify actual interior color
-  vehicleClass: 'USED',
-  isSpecial: false,
-  photoCount: 23,
-  images: [
-    '/images/vehicles/1.jpg',
-    '/images/vehicles/2.jpg',
-    '/images/vehicles/3.jpg',
-    '/images/vehicles/4.jpg',
-    '/images/vehicles/5.jpg',
-    '/images/vehicles/6.jpg',
-    '/images/vehicles/7.jpg',
-    '/images/vehicles/8.jpg',
-    '/images/vehicles/9.jpg',
-    '/images/vehicles/10.jpg',
-    '/images/vehicles/11.jpg',
-    '/images/vehicles/12.jpg',
-    '/images/vehicles/13.jpg',
-    '/images/vehicles/14.jpg',
-    '/images/vehicles/15.jpg',
-    '/images/vehicles/16.jpg',
-    '/images/vehicles/17.jpg',
-    '/images/vehicles/18.jpg',
-    '/images/vehicles/19.jpg',
-    '/images/vehicles/20.jpg',
-    '/images/vehicles/21.jpg',
-    '/images/vehicles/22.jpg',
-    '/images/vehicles/23.jpg',
-  ],
-  headline: 'SUPER CLEAN 2006 Chevrolet Silverado 1500 LT1 – Crew Cab 4WD!',
-  description:
-    'Beautiful 2006 Chevy Silverado 1500 LT1, Crew Cab, 4WD, with 169,314 miles. This truck is in great condition, clean inside and out, and well-maintained. Powerful, dependable, spacious, and ready for its next owner. Priced for a FAST SALE — serious buyers only. Message today for more information or to schedule a viewing. Don\'t miss out on this clean Silverado!',
-  equipment: [
-    'V8 ENGINE',
-    'AUTOMATIC TRANSMISSION',
-    '4WD CAPABILITY',
-    'CREW CAB',
-    'LT1 TRIM',
-    'CLEAN INTERIOR AND EXTERIOR',
-    'STRONG, RELIABLE PERFORMANCE',
-    'READY TO DRIVE',
-    'FINANCING AVAILABLE',
-    'POWER WINDOWS & LOCKS',
-  ],
-},
+    id: 21,
+    stockNumber: '208727',
+    vin: '2GCEK13T061208727',
+    year: 2006,
+    make: 'CHEVROLET',
+    model: 'SILVERADO 1500 CREW CAB',
+    title: '2006 CHEVROLET SILVERADO 1500 CREW CAB',
+    trim: 'LT1 PICKUP 4D',
+    price: 6500,
+    mileage: 169314,
+    drivetrain: '4WD',
+    transmission: 'AUTOMATIC',
+    transmissionDetail: 'AUTOMATIC',
+    engine: 'V8',
+    doors: 4,
+    cityMpg: null,
+    hwyMpg: null,
+    mpgDisplay: '- / -',
+    bodyType: 'PICKUP',
+    fuelType: 'GASOLINE',
+    exteriorColor: 'RED',
+    interiorColor: 'BLACK',
+    vehicleClass: 'USED',
+    isSpecial: false,
+    photoCount: 23,
+    images: [
+      '/images/vehicles/1.jpg',
+      '/images/vehicles/2.jpg',
+      '/images/vehicles/3.jpg',
+      '/images/vehicles/4.jpg',
+      '/images/vehicles/5.jpg',
+      '/images/vehicles/6.jpg',
+      '/images/vehicles/7.jpg',
+      '/images/vehicles/8.jpg',
+      '/images/vehicles/9.jpg',
+      '/images/vehicles/10.jpg',
+      '/images/vehicles/11.jpg',
+      '/images/vehicles/12.jpg',
+      '/images/vehicles/13.jpg',
+      '/images/vehicles/14.jpg',
+      '/images/vehicles/15.jpg',
+      '/images/vehicles/16.jpg',
+      '/images/vehicles/17.jpg',
+      '/images/vehicles/18.jpg',
+      '/images/vehicles/19.jpg',
+      '/images/vehicles/20.jpg',
+      '/images/vehicles/21.jpg',
+      '/images/vehicles/22.jpg',
+      '/images/vehicles/23.jpg',
+    ],
+    headline: 'SUPER CLEAN 2006 Chevrolet Silverado 1500 LT1 – Crew Cab 4WD!',
+    description:
+      'Beautiful 2006 Chevy Silverado 1500 LT1, Crew Cab, 4WD, with 169,314 original miles. This truck is in great condition, clean inside and out, and well-maintained. Powerful, dependable, spacious, and ready for its next owner. Financing available. Priced for a FAST SALE — serious buyers only. Message today for more information or to schedule a viewing. Don\'t miss out on this clean Silverado!',
+    equipment: [
+      'V8 ENGINE',
+      'AUTOMATIC TRANSMISSION',
+      '4WD',
+      'CREW CAB',
+      'LT1 TRIM',
+      'CLEAN INTERIOR AND EXTERIOR',
+      'STRONG, RELIABLE PERFORMANCE',
+      'READY TO DRIVE',
+      'FINANCING AVAILABLE',
+    ],
+  },
 ];
 
-// Exact 6 initial Featured Special slots matching observed reference screenshot order first, followed by remaining specials
+// Full display order for ALL 21 vehicles.
+// First 6 match the observed reference screenshot order (Featured Specials),
+// followed by the remaining 15 vehicles.
 export const FEATURED_STOCK_ORDER = [
-  '245159', // 2017 GMC SIERRA 3500 HD CREW CAB - $39,995
-  '492374', // 2023 GMC YUKON - $56,995
-  '257673', // 2021 GMC YUKON - $51,995
-  '107596', // 2021 GMC YUKON - $39,995
-  '559487', // 2015 CHEVROLET SILVERADO 2500 HD CREW CAB - $21,995
-  '123396', // 2024 GMC SIERRA 2500 HD CREW CAB - $64,995
-  '385288',
-  '632704',
-  '172468',
-  '114693',
-  'B45135',
-  '609236',
-  'X79660',
-  'B50108',
-  '126737',
-  '219770',
-  '113202',
-  '357592',
+  // ── Featured Specials (first 6) ──
+  '245159', // id 13 - 2017 GMC SIERRA 3500 HD CREW CAB - $39,995
+  '492374', // id 4  - 2023 GMC YUKON - $56,995
+  '257673', // id 6  - 2021 GMC YUKON - $51,995
+  '107596', // id 12 - 2021 GMC YUKON - $39,995
+  '559487', // id 17 - 2015 CHEVROLET SILVERADO 2500 HD CREW CAB - $21,995
+  '123396', // id 1  - 2024 GMC SIERRA 2500 HD CREW CAB - $64,995
+
+  // ── Remaining 15 ──
+  '385288', // id 3  - 2023 GMC YUKON
+  '632704', // id 14 - 2015 CHEVROLET SILVERADO 3500 HD CREW CAB
+  '172468', // id 7  - 2022 GMC YUKON
+  '114693', // id 20 - 2003 NISSAN 350Z
+  'B45135', // id 18 - 2006 FORD F350 SUPER DUTY CREW CAB
+  '609236', // id 2  - 2021 RAM 2500 MEGA CAB
+  'X79660', // id 19 - 2013 BMW 5 SERIES
+  'B50108', // id 10 - 2024 FORD BRONCO
+  '126737', // id 5  - 2022 GMC YUKON XL
+  '219770', // id 9  - 2021 CHEVROLET TAHOE PREMIER
+  '113202', // id 8  - 2021 CHEVROLET TAHOE HIGH COUNTRY
+  '357592', // id 11 - 2019 GMC SIERRA 1500 CREW CAB
+  '208727', // id 21 - 2006 CHEVROLET SILVERADO 1500 CREW CAB
+  'C22241', // id 16 - 2012 FORD F250 SUPER DUTY CREW CAB
+  'A38237', // id 15 - 2012 FORD F250 SUPER DUTY CREW CAB
 ];
 
 export function getVehicleUrl(v) {

@@ -14,7 +14,7 @@ export default function InventorySearch() {
   const [model, setModel] = useState('');
   const [bodyType, setBodyType] = useState('');
   const [year, setYear] = useState('');
-  const [minPrice, setMinPrice] = useState(10000);
+  const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(65000);
 
   const availableModels = useMemo(() => {
@@ -27,7 +27,7 @@ export default function InventorySearch() {
     setModel('');
     setBodyType('');
     setYear('');
-    setMinPrice(10000);
+    setMinPrice(0);
     setMaxPrice(65000);
   };
 
@@ -38,7 +38,7 @@ export default function InventorySearch() {
     if (model) params.set('model', model);
     if (bodyType) params.set('bodyType', bodyType);
     if (year) params.set('year', year);
-    if (minPrice > 10000) params.set('minPrice', String(minPrice));
+    if (minPrice > 0) params.set('minPrice', String(minPrice));
     if (maxPrice < 65000) params.set('maxPrice', String(maxPrice));
     const qs = params.toString();
     navigate(qs ? `/inventory?${qs}` : '/inventory');
@@ -98,7 +98,7 @@ export default function InventorySearch() {
               </div>
               <div className="home-price-slider-wrap">
                 <DualRangeSlider
-                  min={10000}
+                  min={0}
                   max={65000}
                   step={1000}
                   valueMin={minPrice}

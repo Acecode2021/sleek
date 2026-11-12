@@ -43,7 +43,7 @@ export default function Inventory({ specialOnly = false }) {
   const [mileageMin, setMileageMin] = useState(20000);
   const [mileageMax, setMileageMax] = useState(250000);
 
-  const [priceMin, setPriceMin] = useState(Number(searchParams.get('minPrice')) || 10000);
+  const [priceMin, setPriceMin] = useState(Number(searchParams.get('minPrice') ?? 0));
   const [priceMax, setPriceMax] = useState(Number(searchParams.get('maxPrice')) || 65000);
 
   // Sync when URL query changes from header search / homepage / brand logos
@@ -53,7 +53,7 @@ export default function Inventory({ specialOnly = false }) {
     const md = searchParams.get('model') || '';
     const bt = searchParams.get('bodyType') || '';
     const yr = Number(searchParams.get('year')) || null;
-    const minP = Number(searchParams.get('minPrice')) || 10000;
+    const minP = Number(searchParams.get('minPrice') ?? 0);
     const maxP = Number(searchParams.get('maxPrice')) || 65000;
 
     setKeyword(q);
@@ -103,7 +103,7 @@ export default function Inventory({ specialOnly = false }) {
     }
   }, [location.key]);
 
-  // Facet counts computed from full 20-vehicle dataset
+  // Facet counts computed from the full vehicle dataset
   const facets = useMemo(() => {
     const countBy = (key) => {
       const counts = {};
@@ -233,7 +233,7 @@ export default function Inventory({ specialOnly = false }) {
     setYearMax(2024);
     setMileageMin(20000);
     setMileageMax(250000);
-    setPriceMin(10000);
+    setPriceMin(0);
     setPriceMax(65000);
     setPage(1);
     setSearchParams({});
@@ -265,7 +265,7 @@ export default function Inventory({ specialOnly = false }) {
             <p style={{ margin: '8px 0 0', fontSize: 13, color: '#555' }}>
               Showing Featured Special vehicles from Sleek Auto Sales demonstration inventory.{' '}
               <Link to="/inventory" style={{ textDecoration: 'underline', fontWeight: 600 }}>
-                View All 20 Vehicles
+                View All 21 Vehicles
               </Link>
             </p>
           )}
@@ -389,7 +389,7 @@ export default function Inventory({ specialOnly = false }) {
                 <span>{formatCurrency(priceMax)}</span>
               </div>
               <DualRangeSlider
-                min={10000}
+                min={0}
                 max={65000}
                 step={1000}
                 valueMin={priceMin}
@@ -762,7 +762,7 @@ export default function Inventory({ specialOnly = false }) {
                   No Matching Demonstration Vehicles Found
                 </h3>
                 <p style={{ color: '#555', margin: '0 0 18px' }}>
-                  Adjust your filters or reset search criteria to view all 20 vehicles in stock.
+                  Adjust your filters or reset search criteria to view all 21 vehicles in stock.
                 </p>
                 <button type="button" className="pill-dark-btn" onClick={handleResetFilters}>
                   Reset All Filters
